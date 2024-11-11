@@ -1,0 +1,58 @@
+{
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5170"
+    },
+    "https": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7067;http://localhost:5170"
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Watch": {
+      "commandName": "Executable",
+      "executablePath": "dotnet",
+      "commandLineArgs": "watch run debug --launch-profile https",
+      "workingDirectory": "."
+    },
+    "tailwind:dev": {
+      "commandName": "Executable",
+      "executablePath": "npx",
+      "commandLineArgs": "tailwindcss -i Tailwindcss/tailwind.css -o wwwroot/Styles/tailwind.css --watch",
+      "workingDirectory": "$(ProjectDir)",
+      "environmentVariables": {
+        "PATH": "$(PATH);$(ProjectDir)/node_modules/.bin"
+      }
+    },
+    "MultiLaunch": {
+      "commandName": "Executable",
+      "executablePath": "dotnet",
+      "commandLineArgs": "watch run debug --launch-profile https & npx tailwindcss -i Tailwindcss/tailwind.css -o wwwroot/Styles/tailwind.css -- watch",
+      "workingDirectory": ".",
+      "jsWebView2Debugging": false
+    }
+  },
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:50152/",
+      "sslPort": 44341
+    }
+  }
+}

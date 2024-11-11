@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CNRBEmployeHRM", "CNRBEmployeHRM\CNRBEmployeHRM.csproj", "{025F2C14-7554-4E1E-9782-6F07DC45AAEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CNRBEmployeHRM.Domain", "CNRBEmployeHRM.Domain\CNRBEmployeHRM.Domain.csproj", "{2A5E980A-0EC4-4AB4-9BC3-29D3ED94EB89}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0C317BB2-F748-40B7-8D4E-BCC0BC36E1BD}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{025F2C14-7554-4E1E-9782-6F07DC45AAEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{025F2C14-7554-4E1E-9782-6F07DC45AAEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{025F2C14-7554-4E1E-9782-6F07DC45AAEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{025F2C14-7554-4E1E-9782-6F07DC45AAEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A5E980A-0EC4-4AB4-9BC3-29D3ED94EB89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A5E980A-0EC4-4AB4-9BC3-29D3ED94EB89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A5E980A-0EC4-4AB4-9BC3-29D3ED94EB89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A5E980A-0EC4-4AB4-9BC3-29D3ED94EB89}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87514B8A-D59A-4036-B453-5EB61DD1ABDA}
+	EndGlobalSection
+EndGlobal
