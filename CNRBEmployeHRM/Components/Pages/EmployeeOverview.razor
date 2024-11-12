@@ -24,12 +24,12 @@ else{
         {
             <tr>
                 <td>
-                    <img src="@($"https://gillcleerenpluralsight.blob.core.windows.net/person/{employee.EmployeId}.jpg")" class=" img-fluid rounded-circle employee-details-img" />
+                    <img src="@($"https://gillcleerenpluralsight.blob.core.windows.net/person/{employee.EmployeeId}.jpg")" class=" img-fluid rounded-circle employee-details-img" />
                 </td>
-                <td>@employee.EmployeId</td>
+                <td>@employee.EmployeeId</td>
                 <td>@employee.FirstName</td>
                 <td>@employee.LastName</td>
-                <td><a>Details</a></td>
+                    <td><a href="@($"employeeDetail/{employee.EmployeeId}")">Details</a></td>
             </tr>
         }
     </tbody>

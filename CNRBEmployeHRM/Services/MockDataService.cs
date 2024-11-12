@@ -1,4 +1,5 @@
 ﻿using CNRBEmployeHRM.Domain;
+using System.Net;
 
 namespace CNRBEmployeHRM.Services
 {
@@ -24,11 +25,12 @@ namespace CNRBEmployeHRM.Services
 
             var e1 = new Employee
             {
-                EmployeId = 1,
+                EmployeeId = 1,
                 FirstName = "Maxim",
                 LastName = "Alexander",
                 Designation = "Entraineur ecole natation",
                 BirthDate = new DateTime(1980, 10, 5),
+                Address = "Saint Georges",
                 IsOnHoliday = false,
                 Gender = Gender.Male,
                 Email = "Maxim@cnrb.com",
@@ -37,11 +39,12 @@ namespace CNRBEmployeHRM.Services
 
             var e2 = new Employee
             {
-                EmployeId = 2,
+                EmployeeId = 2,
                 FirstName = "Mathilde",
                 LastName = "Bernard",
                 Designation = "Entraineure groupe d'age",
                 BirthDate = new DateTime(1981, 10, 5),
+                Address = "Saint Prosper",
                 IsOnHoliday = true,
                 Gender = Gender.Female,
                 Email = "Mathilde@cnrb.com",
