@@ -7,12 +7,12 @@ namespace CNRBEmployeHRM.Services
         public static List<Employee>? _employees = default!;
         public static List<JobCategory> _jobCategories = default!;
 
-        public static List<Employee> Employees
+        public static List<Employee>? Employees
         {
             get
             {
-                _employees ??= InitializeMockEmployees();
                 _jobCategories ??= InitializeMockJobCategories();
+                _employees ??= InitializeMockEmployees();
 
                 return _employees;
             }
@@ -20,6 +20,8 @@ namespace CNRBEmployeHRM.Services
 
         private static List<Employee> InitializeMockEmployees()
         {
+            //_jobCategories ??= InitializeMockJobCategories(); // Ensure job categories are initialized
+
             var e1 = new Employee
             {
                 EmployeId = 1,
@@ -28,7 +30,7 @@ namespace CNRBEmployeHRM.Services
                 Designation = "Entraineur ecole natation",
                 BirthDate = new DateTime(1980, 10, 5),
                 IsOnHoliday = false,
-                Gender =  Gender.Male,
+                Gender = Gender.Male,
                 Email = "Maxim@cnrb.com",
                 PhoneNumber = "5554443232",
             };
@@ -48,17 +50,18 @@ namespace CNRBEmployeHRM.Services
                 JobCategoryId = _jobCategories[2].JobCategoryId,
             };
 
-            return [e1, e2];
+            return new List<Employee> { e1, e2 };
         }
 
         private static List<JobCategory> InitializeMockJobCategories() =>
-        [
-            new JobCategory { JobCategoryId = 1, JobCategoryName = "Entraineur chef", JobCategoryDescription = "Entraineur du groupe Elite" },
-            new JobCategory { JobCategoryId = 2, JobCategoryName = "Entraineur adjoint", JobCategoryDescription = "Entraineur du groupe d'age" },
-            new JobCategory { JobCategoryId = 3, JobCategoryName = "Entraineur ecole natation", JobCategoryDescription = "Entraineur du groupe ecole natation" },
-            new JobCategory { JobCategoryId = 4, JobCategoryName = "Entraineur maitre", JobCategoryDescription = "Entraineur du groupe maitre" },
-            new JobCategory { JobCategoryId = 5, JobCategoryName = "Entraineur benevole", JobCategoryDescription = "Entraineur benevole" },
-            new JobCategory { JobCategoryId = 6, JobCategoryName = "Entraineur du groupe Olympique Speciaux", JobCategoryDescription = "Entraineur Olympique Speciaux " }
-        ];
+        new List<JobCategory>
+        {
+                new JobCategory { JobCategoryId = 1, JobCategoryName = "Entraineur chef", JobCategoryDescription = "Entraineur du groupe Elite" },
+                new JobCategory { JobCategoryId = 2, JobCategoryName = "Entraineur adjoint", JobCategoryDescription = "Entraineur du groupe d'age" },
+                new JobCategory { JobCategoryId = 3, JobCategoryName = "Entraineur ecole natation", JobCategoryDescription = "Entraineur du groupe ecole natation" },
+                new JobCategory { JobCategoryId = 4, JobCategoryName = "Entraineur maitre", JobCategoryDescription = "Entraineur du groupe maitre" },
+                new JobCategory { JobCategoryId = 5, JobCategoryName = "Entraineur benevole", JobCategoryDescription = "Entraineur benevole" },
+                new JobCategory { JobCategoryId = 6, JobCategoryName = "Entraineur du groupe Olympique Speciaux", JobCategoryDescription = "Entraineur Olympique Speciaux " }
+        };
     }
 }
