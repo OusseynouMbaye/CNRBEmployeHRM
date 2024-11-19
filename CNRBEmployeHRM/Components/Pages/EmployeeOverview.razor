@@ -3,37 +3,19 @@
 
 <h3 class="bg-blue-600 text-3xl text-red-500">EmployeeOverview</h3>
 
-@if(Employees == null)
+@if (Employees == null)
 {
     <p><em>Loading</em></p>
 }
-else{
-
-<table class="table table-light">
-    <thead>
-        <tr>
-            <th></th>
-            <th>Employee ID</th>
-            <th>First name</th>
-            <th>Last Name</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
+else
+{
+    <div class="row flex flex-wrap">
         @foreach (var employee in Employees)
         {
-            <tr>
-                <td>
-                    <img src="@($"https://gillcleerenpluralsight.blob.core.windows.net/person/{employee.EmployeeId}.jpg")" class=" img-fluid rounded-circle employee-details-img" />
-                </td>
-                <td>@employee.EmployeeId</td>
-                <td>@employee.FirstName</td>
-                <td>@employee.LastName</td>
-                    <td><a href="@($"employeeDetail/{employee.EmployeeId}")">Details</a></td>
-            </tr>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <EmployeeCard Employee="employee"></EmployeeCard>
+            </div>
         }
-    </tbody>
-
-</table>
+    </div>
 
 } 
