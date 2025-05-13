@@ -1,4 +1,6 @@
-﻿<div class="col">
+﻿@rendermode InteractiveServer
+
+<div class="col">
     <div class="card rounded-3 employee-card">
         <div class="card-header py-3">
             <h4>@Employee.FirstName @Employee.LastName</h4>
@@ -8,6 +10,7 @@
                 <img src="@($"https://gillcleerenpluralsight.blob.core.windows.net/person/{Employee.EmployeeId}.jpg")" class="employee-img rounded-circle img-fluid" alt="@Employee.FirstName @Employee.LastName" />
             </div>
             <a href="@($"employeedetail/{Employee.EmployeeId}")" class="btn btn-outline-primary btn-sm mb-1">Full Details</a>
+            <button type="button" class="btn btn-outline-primary btn-sm" @onclick="ShowQuickView">Quick View</button>
         </div>
     </div>
 </div>

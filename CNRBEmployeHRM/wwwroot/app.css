@@ -610,7 +610,7 @@ progress {
 }
 
     .blockquote-footer::before {
-        content: "— ";
+        content: "ï¿½ï¿½";
     }
 
 .img-fluid {
@@ -12442,7 +12442,8 @@ h6, .h6 {
 }
 
 .employee-img {
-    max-width: 200px;
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++/*    max-width: 200px;*/
+    max-width: -webkit-fill-available;
 }
 
 /* Employee-quick-view */
