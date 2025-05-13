@@ -16,5 +16,10 @@ namespace CNRBEmployeHRM.Components.Pages
             Employee = MockDataService.Employees.Single(e=> e.EmployeeId == EmployeeId);
             //Employee = MockDataService.Employees?.SingleOrDefault(e => e.EmployeId == EmployeeId) ?? new Employee();
         }
+
+        private void ChangeHolidayState()
+        {
+           Employee.IsOnHoliday = !Employee.IsOnHoliday;
+        }
     }
 }
